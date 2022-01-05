@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace FieldLevel.Models
 {
-    internal class Post
+    public class Post
     {
         public int userId { get; set; }
         public int id { get; set; }

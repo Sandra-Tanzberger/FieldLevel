@@ -11,7 +11,7 @@
   "profiles": {
     "FieldLevelPOC": {
       "commandName": "Project",
-      "commandLineArgs": "Data\\posts.json"
+      "commandLineArgs": "Data\\posts.json Data\\groupedposts.json"
     }
   }
 }

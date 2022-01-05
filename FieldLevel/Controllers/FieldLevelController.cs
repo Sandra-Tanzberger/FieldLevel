@@ -22,5 +22,26 @@ namespace FieldLevel.Controllers
 
             //return Ok(StatusCode(202));//Status Code 202 = Accepted
         }
+
+        [HttpPost("getpostbackurl")] //postback url 
+        public IActionResult GetPostBackUrl([FromBody] List<Post> posts)
+        {
+            //write to postback data to file to test
+            if (posts == null)
+            {
+                return BadRequest();
+            }
+
+            try
+            {
+                Posts.WritePostsToFile(posts);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Internal Server Error: " + ex.Message.ToString() + "Inner Exception Error: " + ex.InnerException.Message.ToString());
+            }
+
+            return Ok();
+        }
     }
 }
