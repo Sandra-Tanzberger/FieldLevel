@@ -25,6 +25,7 @@ namespace FieldLevel
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            //services.AddSingleton<FieldLevel.Models.RequestService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
